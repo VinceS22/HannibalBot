@@ -65,5 +65,125 @@ namespace HannibalBot.Modules
         [RequireContext(ContextType.Guild, ErrorMessage = "Sorry, this command must be ran from within a server, not a DM!")]
         public Task GuildOnlyCommand()
             => ReplyAsync("Nothing to see here!");
+
+        /// <summary>
+        /// Takes a list of users and a split amount. Will stage changes to pending approval table
+        /// and upon mod/admin approval will apply the split.
+        /// EX: !split @Vince @Trey @Val 10k
+        /// Response from Hannibal will include an ID for the approvee to use for accepting a split.
+        /// </summary>
+        /// <returns>The object representing a response from the bot.</returns>
+        [Command("split")]
+        public Task Split(params string[] objects)
+        {
+            //TODO: Implement.
+            return ReplyAsync("Vince needs to implement me");
+        }
+
+        /// <summary>
+        /// Approve split if you have sufficient privileges
+        /// Ex: !approve @user
+        /// </summary>
+        /// <param name="objects"></param>
+        [Command("approve")]
+        public Task Approve(params string[] objects)
+        {
+            //TODO: Implement.
+            return ReplyAsync("Vince needs to implement me");
+        }
+
+        /// <summary>
+        /// Applies approve method to all available pending splits. Prompts a confirmation with all pending splits before accepting.
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("approveall")]
+        public Task ApproveAll(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
+
+        /// <summary>
+        /// Denies a posted split
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("deny")]
+        public Task Deny(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
+        /// <summary>
+        /// Checks a given user's splits. TODO: Establish if this requires an elevated privledge.
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("check")]
+        public Task Check(params string[] objects)
+        {
+            return ReplyAsync("Vince Needs to implement me");
+        }
+        /// <summary>
+        /// If user: Clears last split for user
+        /// If admin: Clears last split in general
+        /// TODO: Establish if this is needed and/or if this is desired.
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("clearlast")]
+        public Task ClearLast(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
+        /// <summary>
+        /// Responds with an ASCII table containing hi-scores.
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("Leaderboard")]
+        public Task Leaderboard(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
+        /// <summary>
+        /// Returns a backup of the DB in JSON format ADMIN ONLY
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("export")]
+        public Task Export(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
+        /// <summary>
+        /// Imports a backup of the DB in JSON format. ADMIN ONLY
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("import")]
+        public Task Import(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
+        /// <summary>
+        /// Straight up adds value to a user.
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("addgp")]
+        public Task AddGp(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
+        /// <summary>
+        /// Removes value from a user.
+        /// </summary>
+        /// <param name="objects"></param>
+        /// <returns></returns>
+        [Command("minusgp")]
+        public Task MinusGp(params string[] objects)
+        {
+            return ReplyAsync("Vince needs to implement me");
+        }
     }
 }
