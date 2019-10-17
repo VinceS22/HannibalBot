@@ -70,7 +70,7 @@ namespace HannibalBot.Modules
         /// Takes a list of users and a split amount. Will stage changes to pending approval table
         /// and upon mod/admin approval will apply the split.
         /// EX: !split @Vince @Trey @Val 10k
-        /// Response from Hannibal will include an ID for the approvee to use for accepting a split.
+        /// Response from Hannibal will include a message with the user who posted the drop in a specific channel (to be established).
         /// </summary>
         /// <returns>The object representing a response from the bot.</returns>
         [Command("split")]
